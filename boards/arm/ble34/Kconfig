@@ -1,0 +1,22 @@
+#
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+
+config BOARD_ENABLE_DCDC
+    bool "Enable DCDC mode"
+    select SOC_DCDC_NRF52X
+    default y
+    depends on (BOARD_BLE34_LEFT || BOARD_BLE34_RIGHT)
+
+config BOARD_ENABLE_DCDC_HV
+    bool "Enable High Voltage DCDC converter"
+    select SOC_DCDC_NRF52X_HV
+    default y
+    depends on (BOARD_BLE34_LEFT || BOARD_BLE34_RIGHT)
+
+config BOARD_BLE34_LEFT
+    bool
+
+config BOARD_BLE34_RIGHT
+    bool

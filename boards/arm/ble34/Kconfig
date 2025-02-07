@@ -2,6 +2,11 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 #
+config BOARD_BLE34_LEFT
+    bool
+
+config BOARD_BLE34_RIGHT
+    bool
 
 config BOARD_ENABLE_DCDC
     bool "Enable DCDC mode"
@@ -15,8 +20,3 @@ config BOARD_ENABLE_DCDC_HV
     default y
     depends on (BOARD_BLE34_LEFT || BOARD_BLE34_RIGHT)
 
-config BOARD_BLE34_LEFT
-    bool
-
-config BOARD_BLE34_RIGHT
-    bool

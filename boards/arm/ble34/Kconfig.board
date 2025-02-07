@@ -5,10 +5,8 @@
 
 config BOARD_BLE34_LEFT
     bool "ble34 left"
-    select BOARD_BLE34_LEFT
-    depends on (SOC_NRF52840_QIAA)
+    select SOC_NRF52840_QIAA
 
 config BOARD_BLE34_RIGHT
     bool "ble34 right"
-    select BOARD_BLE34_RIGHT
-    depends on (SOC_NRF52840_QIAA)
+    select SOC_NRF52840_QIAA
